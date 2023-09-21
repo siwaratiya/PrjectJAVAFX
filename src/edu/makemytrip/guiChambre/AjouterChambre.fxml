@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.makemytrip.guiChambre.AjouterChambreController">
+   <children>
+      <Button fx:id="btnajout" layoutX="400.0" layoutY="340.0" mnemonicParsing="false" onAction="#AjouterChambre" text="Ajouter" />
+      <VBox layoutX="447.0" layoutY="63.0" prefHeight="260.0" prefWidth="142.0" spacing="17.0" style="-fx-background-color: #FFE4E1;">
+         <children>
+            <RadioButton mnemonicParsing="false" text="Single">
+               <toggleGroup>
+                  <ToggleGroup fx:id="type" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Double" toggleGroup="$type" />
+            <Pane prefHeight="0.0" prefWidth="142.0" />
+            <RadioButton mnemonicParsing="false" text="Sur piscine">
+               <toggleGroup>
+                  <ToggleGroup fx:id="vue" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="normal" toggleGroup="$vue" />
+            <RadioButton mnemonicParsing="false" text="Sur mer" toggleGroup="$vue" />
+            <TextField fx:id="prix_n" prefHeight="25.0" prefWidth="113.0" />
+            <ComboBox fx:id="cmbo" prefHeight="25.0" prefWidth="141.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="327.0" layoutY="69.0" prefHeight="252.0" prefWidth="100.0" spacing="60.0" style="-fx-background-color: #FFE4E1;">
+         <children>
+            <Label text="Type" />
+            <Label text="Vue" />
+            <Label text="Prix nuites" />
+            <Label fx:id="iid" text="Id hotel" />
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="178.0" style="-fx-background-color: #87CEFA;">
+         <children>
+            <Pane prefHeight="137.0" prefWidth="178.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="185.0" layoutX="-2.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/double.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane layoutX="227.0" layoutY="47.0" prefHeight="9.0" prefWidth="364.0" style="-fx-background-color: #87CEFA;" />
+      <Text layoutX="280.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter chambre" wrappingWidth="224.99999210238457">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.40555555555555556" centerY="0.5142857142857142" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+   </children>
+</AnchorPane>

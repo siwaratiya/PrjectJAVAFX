@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="scenePane" prefHeight="500.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.makemytrip.gui.DetailsWindowController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="164.0" prefHeight="298.0" prefWidth="801.0">
+         <children>
+            <TableView fx:id="table" layoutX="249.0" layoutY="42.0" minHeight="100.0" minWidth="100.0" prefHeight="200.0" prefWidth="463.0">
+              <columns>
+                <TableColumn fx:id="id" minWidth="100.0" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="nom" minWidth="100.0" prefWidth="75.0" text="NOM" />
+                  <TableColumn fx:id="desciption" minWidth="100.0" prefWidth="75.0" text="Desription" />
+                  <TableColumn fx:id="addresse" prefWidth="100.0" text="Addresse" />
+                  <TableColumn fx:id="categorie" minWidth="100.0" prefWidth="100.0" text="Categorie" />
+                  <TableColumn fx:id="nbrch" minWidth="100.0" prefWidth="200.0" text="Nombre du chambre disponible" />
+                  <TableColumn fx:id="email" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="-1.0" text="Addresse Email" />
+                  <TableColumn fx:id="tel" minWidth="100.0" prefWidth="100.0" text="Telephone" />
+              </columns>
+            </TableView>
+            <VBox layoutX="-20.0" layoutY="-164.0" prefHeight="500.0" prefWidth="222.0" style="-fx-background-color: #87CEFA;">
+               <children>
+                  <Pane prefHeight="150.0" prefWidth="222.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/hotell.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btnAjout" mnemonicParsing="false" onAction="#ajouterhotel" prefHeight="25.0" prefWidth="222.0" text="Ajouter Hotel" />
+                  <Button fx:id="log" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="251.0" text="Logout" />
+                  <Button fx:id="btnAfficheHotels" mnemonicParsing="false" onAction="#ViewHotels" prefHeight="25.0" prefWidth="228.0" text="Afficher la liste des Hotels">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnupdel" mnemonicParsing="false" onAction="#updatdelete" prefHeight="25.0" prefWidth="227.0" text="UpdateDelete" />
+                  <Button fx:id="clc" mnemonicParsing="false" onAction="#Calculerrr" prefHeight="32.0" prefWidth="266.0" text="Calculer chambre" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="232.0" layoutY="75.0" prefHeight="8.0" prefWidth="559.0" style="-fx-background-color: #87CEFA;" AnchorPane.leftAnchor="232.0" AnchorPane.rightAnchor="28.0" />
+      <Text layoutX="366.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La listes des hoteles" wrappingWidth="316.13671875">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.48333333333333334" centerY="0.5333333333333333" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
